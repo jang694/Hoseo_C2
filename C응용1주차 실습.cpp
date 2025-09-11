@@ -22,18 +22,18 @@ int main() {
         scanf("%d", &sales[i]);
     }
 
-    // printf("조회할 상품 ID를 입력하세요: ");
+    printf("조회할 상품 ID를 입력하세요: ");
     scanf("%d", &query_id);
 
     // ID에 해당하는 상품 재고 계산 및 출력
     int specific_inventory = stock_in[query_id - 1] - sales[query_id - 1];
-    printf("%d\n", specific_inventory);
+    printf("선택하신 ID의 재고%d\n", specific_inventory);
 
     // 전체 재고 계산 및 출력
     for (int i = 0; i < num_products; i++) {
         total_inventory += (stock_in[i] - sales[i]);
     }
-    printf("%d\n", total_inventory);
+    printf("총 남은 재고의 수는  %d\n", total_inventory);
 
     return 0;
 }
